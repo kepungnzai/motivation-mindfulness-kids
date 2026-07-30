@@ -71,7 +71,7 @@ function updateProgress() {
   if (!progressFill || !progressText) return;
   
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const topicPages = ['topic1.html', 'topic2.html', 'topic3.html', 'topic4.html', 'topic5.html', 'topic6.html', 'quiz.html'];
+  const topicPages = ['topic1.html', 'topic2.html', 'topic3.html', 'topic4.html', 'topic5.html', 'topic6.html', 'topic7.html', 'quiz.html'];
   
   let completedCount = 0;
   
