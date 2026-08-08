@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" role="img" aria-labelledby="title desc">
+  <title id="title">The Feel-Good Menu</title>
+  <desc id="desc">A colorful illustration of a happy menu of feel-good activities, showing that making you feel good is easy to do.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffe8f0"/>
+      <stop offset="50%" stop-color="#e8f4ff"/>
+      <stop offset="100%" stop-color="#e8ffe8"/>
+    </linearGradient>
+    <linearGradient id="menuGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fff5f9"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.7)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="420" rx="36" ry="36" fill="url(#bg)"/>
+
+  <!-- Floating background shapes -->
+  <circle cx="120" cy="60" r="30" fill="#ffd93d" opacity="0.15">
+    <animate attributeName="cy" values="60;50;60" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="880" cy="350" r="40" fill="#6bcb77" opacity="0.15">
+    <animate attributeName="cy" values="350;335;350" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="80" cy="380" r="25" fill="#4d96ff" opacity="0.15">
+    <animate attributeName="cy" values="380;368;380" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="920" cy="90" r="20" fill="#ff6b6b" opacity="0.15">
+    <animate attributeName="cy" values="90;80;90" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Sparkles -->
+  <g font-family="Segoe UI Emoji, Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <text x="180" y="120" font-size="26" fill="#ffd93d">
+      ✨
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-10;0,0" dur="2s" repeatCount="indefinite"/>
+    </text>
+    <text x="820" y="140" font-size="22" fill="#6bcb77">
+      ✨
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+    <text x="700" y="180" font-size="18" fill="#4d96ff">
+      ✨
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-9;0,0" dur="1.8s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Happy child face (top center) -->
+  <g transform="translate(500, 95)" filter="url(#softShadow)">
+    <circle cx="0" cy="0" r="48" fill="#ffcc80">
+      <animate attributeName="r" values="48;51;48" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Hair -->
+    <path d="M-45,-8 Q-48,-55 0,-55 Q48,-55 45,-8 Q38,-25 25,-28 Q35,-40 20,-45 Q5,-50 0,-50 Q-5,-50 -20,-45 Q-35,-40 -25,-28 Q-38,-25 -45,-8" fill="#5d4037"/>
+    <!-- Eyes -->
+    <circle cx="-16" cy="-3" r="6" fill="#333"/>
+    <circle cx="16" cy="-3" r="6" fill="#333"/>
+    <circle cx="-14" cy="-5" r="2" fill="white"/>
+    <circle cx="18" cy="-5" r="2" fill="white"/>
+    <!-- Eyebrows -->
+    <path d="M-24,-14 Q-16,-20 -8,-14" stroke="#5d4037" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M8,-14 Q16,-20 24,-14" stroke="#5d4037" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Smile -->
+    <path d="M-20,12 Q0,35 20,12" stroke="#5d4037" stroke-width="4" fill="none" stroke-linecap="round">
+      <animate attributeName="d" values="M-20,12 Q0,35 20,12;M-20,12 Q0,40 20,12;M-20,12 Q0,35 20,12" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Blush -->
+    <circle cx="-26" cy="8" r="7" fill="#ff9999" opacity="0.5"/>
+    <circle cx="26" cy="8" r="7" fill="#ff9999" opacity="0.5"/>
+    <!-- Happy sparkle on head -->
+    <text x="35" y="-40" font-size="22" fill="#ffd93d">✨</text>
+  </g>
+
+  <!-- Menu board / card -->
+  <g transform="translate(500, 255)" filter="url(#softShadow)">
+    <rect x="-350" y="-135" width="700" height="270" rx="30" fill="url(#menuGrad)" stroke="#ffb8d0" stroke-width="4"/>
+    <!-- Menu header strip -->
+    <rect x="-350" y="-135" width="700" height="55" rx="30" fill="#ff6b6b"/>
+    <rect x="-350" y="-105" width="700" height="25" fill="#ff6b6b"/>
+    <!-- Menu title -->
+    <text x="0" y="-98" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="bold" fill="white" text-anchor="middle">
+      🍽️ The Feel-Good Menu
+    </text>
+
+    <!-- Menu items row 1 -->
+    <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+      <!-- Item 1: Create -->
+      <g transform="translate(-240, -40)">
+        <circle cx="0" cy="0" r="32" fill="#6bcb77" opacity="0.15"/>
+        <text x="0" y="10" font-size="32">🎨</text>
+        <text x="0" y="35" font-size="15" font-weight="bold" fill="#333">Create</text>
+      </g>
+      <!-- Item 2: Move -->
+      <g transform="translate(-140, -40)">
+        <circle cx="0" cy="0" r="32" fill="#4d96ff" opacity="0.15"/>
+        <text x="0" y="10" font-size="32">🏃</text>
+        <text x="0" y="35" font-size="15" font-weight="bold" fill="#333">Move</text>
+      </g>
+      <!-- Item 3: Connect -->
+      <g transform="translate(-40, -40)">
+        <circle cx="0" cy="0" r="32" fill="#ff6b6b" opacity="0.15"/>
+        <text x="0" y="10" font-size="32">🤗</text>
+        <text x="0" y="35" font-size="15" font-weight="bold" fill="#333">Connect</text>
+      </g>
+      <!-- Item 4: Outside -->
+      <g transform="translate(60, -40)">
+        <circle cx="0" cy="0" r="32" fill="#6bcb77" opacity="0.15"/>
+        <text x="0" y="10" font-size="32">🌳</text>
+        <text x="0" y="35" font-size="15" font-weight="bold" fill="#333">Outside</text>
+      </g>
+      <!-- Item 5: Music -->
+      <g transform="translate(160, -40)">
+        <circle cx="0" cy="0" r="32" fill="#ffd93d" opacity="0.2"/>
+        <text x="0" y="10" font-size="32">🎵</text>
+        <text x="0" y="35" font-size="15" font-weight="bold" fill="#333">Music</text>
+      </g>
+      <!-- Item 6: Rest -->
+      <g transform="translate(260, -40)">
+        <circle cx="0" cy="0" r="32" fill="#a29bfe" opacity="0.15"/>
+        <text x="0" y="10" font-size="32">😴</text>
+        <text x="0" y="35" font-size="15" font-weight="bold" fill="#333">Rest</text>
+      </g>
+    </g>
+
+    <!-- Menu items row 2 -->
+    <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+      <!-- Item 7: Read -->
+      <g transform="translate(-180, 55)">
+        <circle cx="0" cy="0" r="28" fill="#4d96ff" opacity="0.15"/>
+        <text x="0" y="9" font-size="28">📖</text>
+        <text x="0" y="32" font-size="14" font-weight="bold" fill="#333">Read</text>
+      </g>
+      <!-- Item 8: Gratitude -->
+      <g transform="translate(-60, 55)">
+        <circle cx="0" cy="0" r="28" fill="#ffd93d" opacity="0.2"/>
+        <text x="0" y="9" font-size="28">🙏</text>
+        <text x="0" y="32" font-size="14" font-weight="bold" fill="#333">Gratitude</text>
+      </g>
+      <!-- Item 9: Laugh -->
+      <g transform="translate(60, 55)">
+        <circle cx="0" cy="0" r="28" fill="#ff6b6b" opacity="0.15"/>
+        <text x="0" y="9" font-size="28">😂</text>
+        <text x="0" y="32" font-size="14" font-weight="bold" fill="#333">Laugh</text>
+        <circle cx="30" cy="-25" r="10" fill="#ffd93d" opacity="0.8">
+          <animate attributeName="r" values="8;12;8" dur="1.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="30" y="-22" font-size="12">✨</text>
+      </g>
+      <!-- Item 10: Dance -->
+      <g transform="translate(180, 55)">
+        <circle cx="0" cy="0" r="28" fill="#6bcb77" opacity="0.15"/>
+        <text x="0" y="9" font-size="28">🕺</text>
+        <text x="0" y="32" font-size="14" font-weight="bold" fill="#333">Dance</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Confetti pieces around the menu -->
+  <g>
+    <rect x="130" y="190" width="10" height="10" rx="2" fill="#ff6b6b" transform="rotate(30 135 195)">
+      <animate attributeName="y" values="190;175;190" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 135 195;30 135 195;0 135 195" dur="3s" repeatCount="indefinite" additive="sum"/>
+    </rect>
+    <rect x="850" y="210" width="10" height="10" rx="2" fill="#ffd93d" transform="rotate(45 855 215)">
+      <animate attributeName="y" values="210;195;210" dur="3.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 855 215;-30 855 215;0 855 215" dur="3.5s" repeatCount="indefinite" additive="sum"/>
+    </rect>
+    <rect x="150" y="300" width="8" height="8" rx="2" fill="#4d96ff" transform="rotate(60 154 304)">
+      <animate attributeName="y" values="300;285;300" dur="4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 154 304;40 154 304;0 154 304" dur="4s" repeatCount="indefinite" additive="sum"/>
+    </rect>
+    <rect x="830" y="310" width="8" height="8" rx="2" fill="#6bcb77" transform="rotate(15 834 314)">
+      <animate attributeName="y" values="310;295;310" dur="3.2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 834 314;-20 834 314;0 834 314" dur="3.2s" repeatCount="indefinite" additive="sum"/>
+    </rect>
+    <rect x="200" y="240" width="6" height="6" rx="1.5" fill="#ff9f43" transform="rotate(20 203 243)">
+      <animate attributeName="y" values="240;225;240" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="785" y="250" width="6" height="6" rx="1.5" fill="#ff6b6b" transform="rotate(-30 788 253)">
+      <animate attributeName="y" values="250;235;250" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Title text at top -->
+  <g text-anchor="middle">
+    <rect x="220" y="310" width="560" height="0" rx="0" fill="none"/>
+    <text x="500" y="405" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="bold" fill="url(#titleGrad)">
+      Making you feel good is easy to do! 🌟
+      <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"/>
+    </text>
+  </g>
+</svg>
