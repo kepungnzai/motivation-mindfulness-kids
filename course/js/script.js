@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Topic page animations
   animateOnScroll();
+  
+  // Topic 5 widgets
+  initWeatherWidget();
+  initThermometerWidget();
 });
 
 function generateStars() {
@@ -137,9 +141,72 @@ function launchConfetti() {
   }, 5000);
 }
 
+// ===== EMOTIONAL WEATHER WIDGET =====
+function initWeatherWidget() {
+  const weatherScene = document.querySelector('.weather-scene');
+  if (!weatherScene) return;
+  
+  const emojiEl = weatherScene.querySelector('.weather-emoji');
+  const statusEl = weatherScene.querySelector('.weather-status');
+  const messageEl = weatherScene.querySelector('.weather-message');
+  
+  const weatherStates = [
+    { emoji: '😊', status: 'Sunny & Happy', message: 'The sun always comes out again! ☀️' },
+    { emoji: '😢', status: 'Rainy & Sad', message: 'It\'s okay to feel sad sometimes 🌧️' },
+    { emoji: '😡', status: 'Stormy & Angry', message: 'Stormy feelings pass too ⛈️' },
+    { emoji: '😌', status: 'Cloudy & Calm', message: 'Clouds drift by, feelings change 🌥️' },
+    { emoji: '😊', status: 'Sunny & Happy', message: 'The sun always comes out again! ☀️' }
+  ];
+  
+  let stateIndex = 0;
+  
+  // Sync weather emoji/status with the 12s CSS animation cycle
+  setInterval(() => {
+    stateIndex = (stateIndex + 1) % weatherStates.length;
+    const state = weatherStates[stateIndex];
+    
+    if (emojiEl) emojiEl.textContent = state.emoji;
+    if (statusEl) statusEl.textContent = state.status;
+    if (messageEl) messageEl.textContent = state.message;
+  }, 2400); // 12s cycle / 5 states = 2.4s per state
+}
+
+// ===== FEELINGS THERMOMETER WIDGET =====
+function initThermometerWidget() {
+  const thermometerWidget = document.querySelector('.thermometer-widget');
+  if (!thermometerWidget) return;
+  
+  const statusEmoji = thermometerWidget.querySelector('.status-emoji');
+  const statusLevel = thermometerWidget.querySelector('.status-level');
+  const statusRange = thermometerWidget.querySelector('.status-range');
+  const statusTip = thermometerWidget.querySelector('.status-tip');
+  
+  const thermometerStates = [
+    { emoji: '😌', level: 'Feeling Calm', range: 'Level 0-3 · Cool', tip: 'Try: Deep breathing 🌬️' },
+    { emoji: '😊', level: 'Feeling Good', range: 'Level 4-6 · Warm', tip: 'Try: Enjoy the moment ✨' },
+    { emoji: '😰', level: 'Feeling Stressed', range: 'Level 7-8 · Hot', tip: 'Try: Take a walk 🚶' },
+    { emoji: '🤯', level: 'Feeling Overwhelmed', range: 'Level 9-10 · Exploding!', tip: 'Try: Ask for a hug 🤗' },
+    { emoji: '😤', level: 'Feeling Frustrated', range: 'Level 7-8 · Hot', tip: 'Try: Draw your feelings 🎨' },
+    { emoji: '😊', level: 'Feeling Good', range: 'Level 4-6 · Warm', tip: 'Try: Splash cold water 🧊' }
+  ];
+  
+  let stateIndex = 0;
+  
+  // Sync thermometer status with the 12s CSS animation cycle
+  setInterval(() => {
+    stateIndex = (stateIndex + 1) % thermometerStates.length;
+    const state = thermometerStates[stateIndex];
+    
+    if (statusEmoji) statusEmoji.textContent = state.emoji;
+    if (statusLevel) statusLevel.textContent = state.level;
+    if (statusRange) statusRange.textContent = state.range;
+    if (statusTip) statusTip.textContent = state.tip;
+  }, 2000); // 12s cycle / 6 states = 2s per state
+}
+
 // ===== SCROLL ANIMATIONS =====
 function animateOnScroll() {
-  const elements = document.querySelectorAll('.info-box, .illustration');
+  const elements = document.querySelectorAll('.info-box, .illustration, .weather-widget, .thermometer-widget');
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
