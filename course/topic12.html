@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topic 12: Stay Curious! 🔍✨</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .checklist { list-style: none; padding: 0; margin: 15px 0; }
+    .checklist li {
+      background: white; border-radius: 12px; padding: 12px 16px; margin: 8px 0;
+      display: flex; gap: 12px; align-items: flex-start;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    .zigzag {
+      background: white; border-radius: 15px; padding: 20px; margin: 15px 0;
+      text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    }
+    .zigzag .wave { font-size: 2em; letter-spacing: 2px; }
+    .dopa-chart { width: 100%; max-width: 560px; margin: 10px auto 0; display: block; }
+    .dopa-chart .zig-line {
+      fill: none; stroke: #ff6b6b; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round;
+      stroke-dasharray: 1400; stroke-dashoffset: 1400;
+      animation: zigDraw 4s ease-in-out infinite;
+    }
+    @keyframes zigDraw {
+      0% { stroke-dashoffset: 1400; }
+      55% { stroke-dashoffset: 0; }
+      85% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -1400; }
+    }
+    .dopa-chart .spike-dot { animation: spikePop 2s infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes spikePop { 0%,100% { transform: scale(1); } 50% { transform: scale(1.5); } }
+    .curiosity-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px; margin: 20px 0;
+    }
+    .curiosity-card {
+      background: white; border-radius: 15px; padding: 20px; text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-top: 4px solid #ffd93d;
+      transition: transform 0.3s;
+    }
+    .curiosity-card:hover { transform: translateY(-5px); }
+    .curiosity-card .c-icon { font-size: 2.8em; display: block; margin-bottom: 10px; animation: bounce 2s infinite; }
+    .curiosity-card h4 { color: #667eea; margin-bottom: 8px; }
+    .curiosity-card p { font-size: 0.88em; color: #666; line-height: 1.5; }
+    .talk-steps { counter-reset: step; list-style: none; padding: 0; margin: 15px 0; }
+    .talk-steps li {
+      counter-increment: step; background: white; border-radius: 12px;
+      padding: 15px 18px; margin: 10px 0; display: flex; gap: 14px; align-items: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    .talk-steps li::before {
+      content: counter(step); background: linear-gradient(135deg, #ffd93d, #ff9f43);
+      color: white; font-weight: bold; width: 35px; height: 35px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .challenge-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; }
+    .challenge-table td, .challenge-table th { background: white; border: 2px solid #f0f0f0; padding: 10px 12px; border-radius: 8px; }
+    .challenge-table th { background: #667eea; color: white; }
+    .motivation-quote {
+      text-align: center; font-style: italic; font-size: 1.15em; color: #667eea;
+      margin: 20px 0; padding: 15px; background: white; border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="floating-shapes"></div>
+
+  <div class="container">
+    <nav class="nav-bar">
+      <a href="index.html" class="logo">🌟 MindQuest</a>
+      <div class="nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="topic1.html">1</a>
+        <a href="topic2.html">2</a>
+        <a href="topic3.html">3</a>
+        <a href="topic4.html">4</a>
+        <a href="topic5.html">5</a>
+        <a href="topic5a.html">5A</a>
+        <a href="topic6.html">6</a>
+        <a href="topic7.html">7</a>
+        <a href="topic8.html">8</a>
+        <a href="topic9.html">9</a>
+        <a href="topic10.html">10</a>
+        <a href="topic11.html">11</a>
+        <a href="topic12.html" class="active">12</a>
+        <a href="quiz.html">🧠 Quiz</a>
+      </div>
+    </nav>
+
+    <div class="topic-content">
+      <h1>🔍 Stay Curious!</h1>
+      <span class="topic-icon">🔍</span>
+      <p class="intro-text">
+        Have you ever felt like you're <strong>not curious anymore</strong>? Like everything is
+        <strong>"meh... boring..."</strong> 🥱 and you don't even feel like talking when you're
+        with friends? You're not broken / wrong — your <strong>curiosity battery is just low</strong>!
+        The good news? Scientists have discovered exactly how to <strong>recharge it</strong>! ⚡✨
+      </p>
+
+      <div class="illustration">
+        <div class="emoji-row">
+          <span>🔍</span>
+          <span>🧠</span>
+          <span>⚡</span>
+          <span>💡</span>
+          <span>🌟</span>
+        </div>
+      </div>
+      <!-- 1. Is your curiosity low? -->
+      <div class="info-box activity">
+        <h3>🪫 Is Your Curiosity Battery Low?</h3>
+        <p>See if any of these sound like you lately. Tick them in your head! ☝️</p>
+        <ul class="checklist">
+          <li>😐 <div><strong>"Meh, boring..."</strong> — games, hobbies, even fun stuff feels flat.</div></li>
+          <li>🤐 <div><strong>Quiet in a group</strong> — with friends, you don't have much to say or ask. You just listen... or zone out.</div></li>
+          <li>📱 <div><strong>Scroll, scroll, scroll</strong> — you'd rather watch short videos than play, build, read, or explore.</div></li>
+          <li>❓ <div><strong>No more "why?" questions</strong> — you used to ask "why is the sky blue?" Now you don't even wonder.</div></li>
+          <li>😴 <div><strong>Hard to start anything</strong> — homework, hobbies, even fun projects feel like climbing a mountain.</div></li>
+        </ul>
+        <p style="text-align:center; background:white; border-radius:10px; padding:10px; font-size:1.05em;">
+          👉 Ticked 2 or more? Your curiosity battery is <strong>low — and that's fixable!</strong> 🔋✨
+        </p>
+      </div>
+
+      <!-- 2. Dopamine zig zag -->
+      <div class="info-box tip">
+        <h3>⚡ Your Brain's Dopamine Zig-Zag!</h3>
+        <p>
+          Inside your brain there's a messenger called <strong>dopamine</strong> (say: DOH-puh-meen).
+          Think of it like <strong>sparkle fuel</strong> ✨ that makes you feel excited, motivated, and curious!
+        </p>
+        <div class="zigzag">
+          <div style="font-weight:bold; color:#667eea; margin-bottom:10px;">📱 What social media does to your sparkle fuel:</div>
+          <svg class="dopa-chart" viewBox="0 0 560 240" role="img" aria-label="Line chart showing dopamine zig-zagging up and down with each short video">
+            <line x1="45" y1="20" x2="45" y2="200" stroke="#ccc" stroke-width="2"/>
+            <line x1="45" y1="200" x2="540" y2="200" stroke="#ccc" stroke-width="2"/>
+            <text x="10" y="60" font-size="20">😃</text>
+            <text x="10" y="175" font-size="20">😐</text>
+            <text x="200" y="222" font-size="13" fill="#999">swipe 👆 swipe 👆 swipe 👆 swipe 👆</text>
+            <polyline class="zig-line" points="45,170 95,60 145,160 195,55 245,155 295,50 345,150 395,60 445,155 495,70 535,160"/>
+            <g font-size="18" text-anchor="middle">
+              <text class="spike-dot" x="95" y="48">⚡</text>
+              <text class="spike-dot" x="195" y="43" style="animation-delay:0.3s">⚡</text>
+              <text class="spike-dot" x="295" y="38" style="animation-delay:0.6s">⚡</text>
+              <text class="spike-dot" x="395" y="48" style="animation-delay:0.9s">⚡</text>
+              <text class="spike-dot" x="495" y="58" style="animation-delay:1.2s">⚡</text>
+              <text x="535" y="185">😵‍💫</text>
+            </g>
+          </svg>
+          <p style="margin-top:10px; color:#666;">
+            Every swipe, like, and funny short video gives you a <strong>TINY spike</strong> —
+            <strong>up! down! up! down!</strong> Like a roller coaster that never stops! 🎢
+          </p>
+        </div>
+        <ul>
+          <li>🎢 <strong>Spike, spike, spike!</strong> Short videos give fast, tiny rewards — your brain gets used to excitement every 5 seconds.</li>
+          <li>🔋 <strong>Then... flat!</strong> Real life (chatting, reading, building) feels SLOW by comparison. That's why you go quiet in a group!</li>
+          <li>🧪 <strong>It's limited fuel!</strong> Scientist Wolfram Schultz found dopamine fires most for <em>surprise and novelty</em> — but if everything is hyper-new every 3 seconds, nothing feels special.</li>
+        </ul>
+      </div>
+
+      <!-- 3. Remove the noise -->
+      <div class="info-box story">
+        <h3>🔇 Remove the Noise, Recharge Your Curiosity!</h3>
+        <p><strong>Turn down the fast noise, so slow wonders feel exciting again!</strong> Scientists call this a reset break for your reward system.</p>
+        <ul>
+          <li>📵 <strong>Phone-free mornings:</strong> No scrolling for 30–60 mins after waking up. Wake up curious, not zig-zaggy!</li>
+          <li>⏸️ <strong>The 24-hour challenge:</strong> One day a week, swap short videos for long fun — a movie, book, LEGO, cooking, or nature walk.</li>
+          <li>🔕 <strong>Turn off autoplay &amp; notifications:</strong> Every "ding!" steals a zig-zag. Ask a grown-up to help switch them off.</li>
+          <li>🌙 <strong>No screens before sleep:</strong> Your brain files memories and curiosity while you sleep. Screens steal filing time!</li>
+        </ul>
+      </div>
+
+      <!-- 4. Research-backed curiosity builders -->
+      <div class="info-box" style="border-left-color:#ffd93d; background:linear-gradient(135deg,#ffd93d15,#ff9f4315);">
+        <h3>🔬 6 Science-Backed Ways to Grow Curiosity</h3>
+        <p>Real scientists studied curiosity — here's what works:</p>
+        <div class="curiosity-grid">
+          <div class="curiosity-card">
+            <span class="c-icon">❓</span>
+            <h4>1. Ask "Why?" Like a Detective</h4>
+            <p>George Loewenstein found curiosity grows from an <strong>information gap</strong> — knowing a LITTLE makes you want MORE! Ask 3 why/how questions daily.</p>
+          </div>
+          <div class="curiosity-card">
+            <span class="c-icon">📚</span>
+            <h4>2. Wonder Before You Google</h4>
+            <p>Matthias Gruber found <strong>curious brains remember better</strong>! Guess FIRST, then look it up. Your memory saver lights up! 🧠</p>
+          </div>
+          <div class="curiosity-card">
+            <span class="c-icon">💬</span>
+            <h4>3. Be a Question Friend</h4>
+            <p>Alison Wood Brooks found <strong>asking questions makes you more liked!</strong> Try: "What's the coolest thing you did?"</p>
+          </div>
+          <div class="curiosity-card">
+            <span class="c-icon">🌿</span>
+            <h4>4. Go on Awe Walks</h4>
+            <p>Dacher Keltner found <strong>awe in nature recharges wonder</strong>. Stare at clouds, bugs, stars. Whisper "whoa..." ✨</p>
+          </div>
+          <div class="curiosity-card">
+            <span class="c-icon">🎨</span>
+            <h4>5. Try Tiny New Things</h4>
+            <p>Novelty fires dopamine! Draw with your other hand, take a new route, taste a new fruit. Small new = big curious!</p>
+          </div>
+          <div class="curiosity-card">
+            <span class="c-icon">📓</span>
+            <h4>6. Keep a Wonder Journal</h4>
+            <p>Write 1 surprising thing daily. Kids who notice and write ideas become <strong>better learners</strong>!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Talk in groups -->
+      <div class="info-box activity">
+        <h3>🗣️ Quiet in a Group? Try the 3-Question Rescue!</h3>
+        <p>Nothing to say? Your brain just needs practice. Use this rescue plan:</p>
+        <ol class="talk-steps">
+          <li><div><strong>Copy + Curious:</strong> Repeat what they said + ask. "You went camping? What was the WEIRDEST thing you saw?" 🏕️</div></li>
+          <li><div><strong>Would You Rather:</strong> "Would you rather have a pet dragon or be able to fly?" Instant starter! 🐉</div></li>
+          <li><div><strong>Share a Wonder:</strong> "Octopuses have THREE hearts! Did you know that?" Curiosity is contagious! 🐙</div></li>
+        </ol>
+      </div>
+
+      <!-- 6. 7-day challenge -->
+      <div class="info-box tip">
+        <h3>🏆 The 7-Day Curiosity Recharge Challenge</h3>
+        <p>Stick this on your fridge! Tick each day:</p>
+        <table class="challenge-table">
+          <tr><th>Day</th><th>Mission</th><th>✅</th></tr>
+          <tr><td><strong>1</strong></td><td>🔇 No short videos. Play or build for 30 mins instead.</td><td>☐</td></tr>
+          <tr><td><strong>2</strong></td><td>❓ Ask 3 "why/how" questions to a grown-up or friend.</td><td>☐</td></tr>
+          <tr><td><strong>3</strong></td><td>🌿 Awe walk: find 5 cool things outside!</td><td>☐</td></tr>
+          <tr><td><strong>4</strong></td><td>💬 Ask a friend one BIG question + really listen. No phone!</td><td>☐</td></tr>
+          <tr><td><strong>5</strong></td><td>🎨 Try one tiny NEW thing (food, route, game, word).</td><td>☐</td></tr>
+          <tr><td><strong>6</strong></td><td>📓 Journal: write 3 things that surprised you this week.</td><td>☐</td></tr>
+          <tr><td><strong>7</strong></td><td>🌟 Teach someone one cool thing you learned!</td><td>☐</td></tr>
+        </table>
+      </div>
+
+      <div class="illustration">
+        <span class="emoji-big">🔍</span>
+      </div>
+
+      <div class="info-box" style="background: linear-gradient(135deg, #ffd93d20, #667eea20); border-left-color: #ffd93d;">
+        <h3>🌟 The Bottom Line</h3>
+        <ul>
+          <li>🪫 <strong>Feeling "meh" or quiet isn't your fault</strong> — fast videos zig-zag your dopamine and use up wonder fuel!</li>
+          <li>🔇 <strong>Remove the noise</strong> — screen breaks, no autoplay, phone-free mornings bring curiosity BACK!</li>
+          <li>❓ <strong>Curiosity is a muscle</strong> — ask questions, guess before you Google, explore nature, try tiny new things!</li>
+          <li>💬 <strong>Questions connect you</strong> — curious question-askers make the BEST friends!</li>
+        </ul>
+        <p class="motivation-quote">
+          "Turn down the zig-zag. Turn UP the wonder!" ✨
+        </p>
+      </div>
+    </div>
+
+    <!-- Mini Quiz -->
+    <div class="quiz-container">
+      <span class="quiz-icon">🤔</span>
+      <h2 style="text-align:center; color:#667eea; margin-bottom:20px;">📝 Topic 12 Mini Quiz</h2>
+      <p style="text-align:center; color:#666; margin-bottom:20px;">Test what you learned about Curiosity!</p>
+
+      <div class="question" data-correct="b">
+        <h3><span class="q-number">1</span> What does the "zig-zag" of short videos do?</h3>
+        <div class="options">
+          <div class="option" data-value="a">🅰️ It makes real life feel MORE exciting</div>
+          <div class="option" data-value="b">🅱️ It gives fast tiny spikes, so normal fun feels boring</div>
+          <div class="option" data-value="c">🅲️ It deletes your brain</div>
+          <div class="option" data-value="d">🅳️ It has no effect at all</div>
+        </div>
+      </div>
+
+      <div class="question" data-correct="c">
+        <h3><span class="q-number">2</span> What is the BEST way to recharge curiosity?</h3>
+        <div class="options">
+          <div class="option" data-value="a">🅰️ Watch even MORE short videos</div>
+          <div class="option" data-value="b">🅱️ Stay inside and do nothing</div>
+          <div class="option" data-value="c">🅲️ Take screen breaks and explore, ask, and play</div>
+          <div class="option" data-value="d">🅳️ Never ask questions again</div>
+        </div>
+      </div>
+
+      <div class="question" data-correct="a">
+        <h3><span class="q-number">3</span> When you're quiet in a group, what should you try?</h3>
+        <div class="options">
+          <div class="option" data-value="a">🅰️ Ask a curious question and really listen</div>
+          <div class="option" data-value="b">🅱️ Stare at your phone</div>
+          <div class="option" data-value="c">🅲️ Walk away forever</div>
+          <div class="option" data-value="d">🅳️ Only talk about yourself</div>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-success mini-submit" disabled style="opacity:0.5; cursor:not-allowed;">✅ Check My Answers</button>
+        <button class="btn btn-primary mini-reset">🔄 Try Again</button>
+      </div>
+
+      <div class="quiz-result mini-result">
+        <span class="result-icon">🌟</span>
+        <h2>Your Mini Quiz Result</h2>
+        <div class="score">0 / 3</div>
+        <p class="result-message"></p>
+        <div class="answers-review"></div>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <a href="topic11.html" class="btn btn-primary prev-link">← Previous: Exercise 🏃</a>
+      <a href="quiz.html" class="btn btn-success next-link">Next: Pop Quiz! 🧠 →</a>
+    </div>
+
+    <footer class="footer">
+      <p>🌟 MindQuest - Topic 12: Stay Curious! 🌟</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

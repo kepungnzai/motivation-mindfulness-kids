@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topic 11: Exercise - Release the Stress! 🏃💨</title>
+  <title>Topic 11: Exercise - Release Your Potential! 🏃✨</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
     .energy-meter {
@@ -25,17 +25,17 @@
       position: relative;
       overflow: hidden;
     }
-    .energy-box.stressed {
-      border: 3px solid #ff6b6b;
-      border-top: 6px solid #ff6b6b;
-      animation: stressPulse 2s infinite;
+    .energy-box.buzzy {
+      border: 3px solid #ff9f43;
+      border-top: 6px solid #ff9f43;
+      animation: buzzPulse 2s infinite;
     }
     .energy-box.calm {
       border: 3px solid #6bcb77;
       border-top: 6px solid #6bcb77;
       animation: calmPulse 2s infinite;
     }
-    @keyframes stressPulse {
+    @keyframes buzzPulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.02); }
     }
@@ -167,13 +167,13 @@
       font-size: 0.87em;
       color: #666;
     }
-    .stress-release-steps {
+    .potential-steps {
       counter-reset: step;
       list-style: none;
       padding: 0;
       margin: 20px 0;
     }
-    .stress-release-steps li {
+    .potential-steps li {
       counter-increment: step;
       background: white;
       border-radius: 12px;
@@ -185,10 +185,10 @@
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
       transition: transform 0.3s;
     }
-    .stress-release-steps li:hover {
+    .potential-steps li:hover {
       transform: translateX(10px);
     }
-    .stress-release-steps li::before {
+    .potential-steps li::before {
       content: counter(step);
       background: linear-gradient(135deg, #6bcb77, #4d96ff);
       color: white;
@@ -202,7 +202,7 @@
       flex-shrink: 0;
       font-size: 1.1em;
     }
-    .stress-release-steps li .step-icon {
+    .potential-steps li .step-icon {
       font-size: 2em;
       flex-shrink: 0;
     }
@@ -262,7 +262,7 @@
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(107, 203, 119, 0.3);
     }
-    .stress-emoji-huge {
+    .spark-emoji-huge {
       font-size: 4em;
       display: block;
       margin: 10px auto;
@@ -297,18 +297,19 @@
         <a href="topic9.html">9</a>
         <a href="topic10.html">10</a>
         <a href="topic11.html" class="active">11</a>
+        <a href="topic12.html">12</a>
         <a href="quiz.html">🧠 Quiz</a>
       </div>
     </nav>
 
     <div class="topic-content">
-      <h1>🏃 Exercise - Release the Stress!</h1>
+      <h1>🏃 Exercise - Release Your Potential!</h1>
       <span class="topic-icon">🏃</span>
       <p class="intro-text">
-        When you're <strong>overthinking</strong>, your brain is running in circles like a hamster on a wheel! 🐹 
+        When you're <strong>stuck in your head</strong>, your brain is running in circles like a hamster on a wheel! 🐹 
         But there's a <strong>super powerful trick</strong>: <strong>MOVE YOUR BODY!</strong> 
-        When you exercise, your brain <strong>stops overthinking</strong> and focuses on the <strong>current moment</strong>— 
-        and all that built-up <strong>stress energy</strong> gets released! 💨✨
+        When you exercise, your brain <strong>wakes up with curiosity</strong> and focuses on the <strong>present moment</strong>— 
+        and all that built-up <strong>energy turns into potential and curiosity</strong>! ✨🔍
       </p>
 
       <div class="illustration">
@@ -323,47 +324,47 @@
     
       <!-- Energy Meter -->
       <div class="info-box activity">
-        <h3>📊 The Stress Energy Meter</h3>
+        <h3>📊 The Energy-to-Curiosity Meter</h3>
         <p>
-          Imagine your body has an <strong>energy tank</strong>. Stress fills it up! When it's <strong>too full</strong>, 
-          you feel jittery, worried, and stuck in your head. Exercise is the <strong>release valve</strong> that lets the pressure out! 
+          Imagine your body has an <strong>energy tank</strong>. Wiggly, buzzy energy fills it up! When it's <strong>full</strong>, 
+          you feel restless and your thoughts spin in circles. Exercise is the <strong>superpower switch</strong> that turns that energy into <strong>potential and curiosity</strong>! 
         </p>
 
         <div class="energy-meter">
-          <div class="energy-box stressed">
-            <span class="meter-icon">😫</span>
-            <div class="meter-label" style="color:#ff6b6b;">BEFORE EXERCISE</div>
-            <p>Overthinking Brain 🧠🌀</p>
-            <p>Stress Tank: <strong>SUPER FULL!</strong></p>
+          <div class="energy-box buzzy">
+            <span class="meter-icon">😶‍🌫️</span>
+            <div class="meter-label" style="color:#ff9f43;">BEFORE EXERCISE</div>
+            <p>Buzzy Brain 🧠🌀</p>
+            <p>Energy Tank: <strong>SUPER FULL!</strong></p>
             <div class="energy-fill">
               <div class="fill-red"></div>
             </div>
-            <p style="margin-top:10px; font-size:0.85em; color:#ff6b6b;">Feeling: Jittery, worried, stuck 😖</p>
+            <p style="margin-top:10px; font-size:0.85em; color:#ff9f43;">Feeling: Restless, buzzy, stuck 😵‍💫</p>
           </div>
 
           <div class="meter-arrow">➡️</div>
 
           <div class="energy-box calm">
-            <span class="meter-icon">😌</span>
+            <span class="meter-icon">🤩</span>
             <div class="meter-label" style="color:#6bcb77;">AFTER EXERCISE</div>
-            <p>Calm Brain 🧠😊</p>
-            <p>Stress Tank: <strong>Released!</strong></p>
+            <p>Curious Brain 🧠✨</p>
+            <p>Energy Tank: <strong>Potential Unlocked!</strong></p>
             <div class="energy-fill">
               <div class="fill-green"></div>
             </div>
-            <p style="margin-top:10px; font-size:0.85em; color:#6bcb77;">Feeling: Calm, focused, present 🧘</p>
+            <p style="margin-top:10px; font-size:0.85em; color:#6bcb77;">Feeling: Curious, focused, ready to explore 🔍</p>
           </div>
         </div>
       </div>
 
-      <!-- Why exercise stops overthinking -->
+      <!-- Why exercise unlocks potential -->
       <div class="info-box tip">
-        <h3>🧠 Why Does Exercise Stop Overthinking?</h3>
+        <h3>🧠 Why Does Exercise Unlock Curiosity?</h3>
         <p>Here's the <strong>science-y magic</strong>:</p>
         <ul>
-          <li>🏃 <strong>Your brain can't do two things at once!</strong> When you're running, jumping, or playing sports, your brain is focused on your <strong>body, your breathing, and the moment</strong>—not on replaying that awkward conversation! </li>
-          <li>💨 <strong>Stress energy gets released!</strong> When you feel stressed, your body fills with <strong>adrenaline</strong> (energy). Exercise burns it off—that's why you feel calmer after!</li>
-          <li>😊 <strong>Happy chemicals flood in!</strong> Exercise releases <strong>endorphins</strong>, <strong>dopamine</strong>, and <strong>serotonin</strong>—chemicals that make you feel good!</li>
+          <li>🏃 <strong>Your brain loves to move and explore!</strong> When you're running, jumping, or playing sports, your brain tunes into your <strong>body, your breathing, and the world around you</strong>—asking "What's next? What can I try?" </li>
+          <li>⚡ <strong>Wiggly energy turns into superpower energy!</strong> When you have extra buzzy energy, your body fills with <strong>adrenaline</strong>. Exercise puts it to work—that's why you feel curious and ready after!</li>
+          <li>😊 <strong>Happy chemicals flood in!</strong> Exercise releases <strong>endorphins</strong>, <strong>dopamine</strong>, and <strong>serotonin</strong>—chemicals that make you feel good and curious!</li>
           <li>🎯 <strong>You practice being present!</strong> Counting your steps, feeling your heartbeat, and watching where you're going = <strong>mindfulness in action!</strong></li>
         </ul>
       </div>
@@ -392,7 +393,7 @@
           <div class="card">
             <span class="chem-icon">💪</span>
             <h4>Adrenaline</h4>
-            <p>The <strong>"energy"</strong> chemical! Exercise uses it up so it doesn't turn into stress!</p>
+            <p>The <strong>"energy"</strong> chemical! Exercise puts it to work so you feel <strong>curious and ready for adventure</strong>!</p>
           </div>
         </div>
       </div>
@@ -416,7 +417,7 @@
           <div class="exercise-type">
             <span class="ex-icon">🚴</span>
             <h4>Bike Ride</h4>
-            <p>Pedal fast and feel the stress energy burn away with every push!</p>
+            <p>Pedal fast and feel your curiosity grow with every push!</p>
           </div>
           <div class="exercise-type">
             <span class="ex-icon">🤸</span>
@@ -436,22 +437,22 @@
         </div>
       </div>
 
-      <!-- How to release stress -->
+      <!-- How to release your potential -->
       <div class="info-box story">
-        <h3>💨 Your Stress Release Recipe</h3>
-        <p>Here's how to turn <strong>overthinking</strong> into <strong>calm</strong> with exercise:</p>
+        <h3>✨ Your Potential-Unlocking Recipe</h3>
+        <p>Here's how to turn <strong>buzzy energy</strong> into <strong>curiosity and potential</strong> with exercise:</p>
 
-        <ol class="stress-release-steps">
+        <ol class="potential-steps">
           <li>
-            <span class="step-icon">😫</span>
+            <span class="step-icon">🤔</span>
             <div>
-              <strong>Notice the stress:</strong> "Uh oh, my brain is spinning again. I feel all jittery inside!"
+              <strong>Notice the buzz:</strong> "Uh oh, my brain is spinning. I feel all wiggly inside—time to move!"
             </div>
           </li>
           <li>
             <span class="step-icon">⚡</span>
             <div>
-              <strong>Recognize the energy:</strong> "This stress is just extra energy my body has bottled up!"
+              <strong>Spot your power:</strong> "This buzzy feeling is extra energy—my body's super fuel waiting to be used!"
             </div>
           </li>
           <li>
@@ -467,9 +468,9 @@
             </div>
           </li>
           <li>
-            <span class="step-icon">😌</span>
+            <span class="step-icon">🤩</span>
             <div>
-              <strong>Feel the release:</strong> The stress energy is GONE! Your brain is quiet. You're here, NOW.
+              <strong>Feel your potential wake up:</strong> The wiggles are gone! Your brain is curious. You're here, NOW—ready to explore!
             </div>
           </li>
         </ol>
@@ -482,36 +483,36 @@
 
       <!-- Fun fact / story -->
       <div class="info-box tip">
-        <h3>📖 The Story of the Pressure Cooker</h3>
+        <h3>📖 The Story of the Treasure Chest</h3>
         <p>
-          Imagine your body is a <strong>pressure cooker</strong> on the stove. When you feel stressed, the pressure 
-          is building up inside: <strong>hiss... hiss... hiss...</strong> 😰
+          Imagine your body is a <strong>treasure chest</strong> full of sparkling energy gems! 💎 When you're sitting still, 
+          the gems are all jumbled up inside: <strong>rattle... rattle... rattle...</strong> 🫨
         </p>
         <p>
-          If you never let the steam out, what happens? <strong>BOOM!</strong> It explodes! 💥
+          If you never open the chest, the gems stay hidden! What a waste of treasure! 😱
         </p>
         <p>
-          Exercise is the <strong>steam valve</strong>! It lets the pressure out <strong>slowly and safely</strong>. 
-          You feel the hiss... <strong>hissssss...</strong> and all that built-up energy floats away like steam. 🌫️
+          Exercise is the <strong>golden key</strong>! 🗝️ It unlocks the chest and lets your energy gems <strong>shine out into the world</strong>. 
+          You feel the sparkle... <strong>shinnnnne...</strong> and all that buzzy energy turns into <strong>curiosity, ideas, and superpowers</strong>! ✨
         </p>
         <p>
-          That's why after a good run, bike ride, or dance session, you feel <strong>light, calm, and clear-headed</strong>— 
-          the pressure is gone! You didn't need to solve every problem in your head. You just needed to let the steam out! 🌈
+          That's why after a good run, bike ride, or dance session, you feel <strong>curious, bright, and full of ideas</strong>— 
+          your potential is unlocked! You didn't need to sit and think harder. You just needed to move and let your curiosity out! 🌈
         </p>
       </div>
 
       <!-- Kid-friendly challenge -->
       <div class="info-box activity">
         <h3>🏆 The "Move & Marble" Challenge</h3>
-        <p>Here's a fun way to use exercise as your stress-release superpower:</p>
+        <p>Here's a fun way to use exercise as your potential-unlocking superpower:</p>
         <ol>
           <li>🎯 Keep a jar of <strong>marbles</strong> (or buttons, or coins)</li>
-          <li>😫 Every time you notice yourself <strong>overthinking</strong>, do <strong>30 seconds of exercise</strong> (jumping jacks, running on the spot, dancing!)</li>
+          <li>🌀 Every time you notice your thoughts <strong>spinning in circles</strong>, do <strong>30 seconds of exercise</strong> (jumping jacks, running on the spot, dancing!)</li>
           <li>⚪ Drop a <strong>marble</strong> into the jar every time</li>
-          <li>🗓️ At the end of the week, count your marbles—each one is a time you <strong>released stress</strong> instead of letting it build up!</li>
+          <li>🗓️ At the end of the week, count your marbles—each one is a time you <strong>unlocked curiosity and potential</strong> instead of staying stuck!</li>
         </ol>
         <p style="text-align:center; font-size:1.2em; padding:10px; background:white; border-radius:10px; margin-top:15px;">
-          <strong>30 seconds of movement = a calmer brain!</strong> 🧠😊
+          <strong>30 seconds of movement = a curious brain!</strong> 🧠✨
         </p>
       </div>
 
@@ -523,18 +524,18 @@
       <div class="info-box" style="background: linear-gradient(135deg, #6bcb7720, #4d96ff20); border-left-color: #6bcb77;">
         <h3>🌟 The Bottom Line</h3>
         <ul>
-          <li>🏃 <strong>Exercise stops overthinking</strong>—your brain can only focus on ONE thing at a time, and moving your body takes the spotlight!</li>
-          <li>💨 <strong>Stress is just energy</strong>—exercise is the release valve that lets it out safely!</li>
+          <li>🏃 <strong>Exercise unlocks curiosity</strong>—when you move your body, your brain switches from looping thoughts to exploring the world!</li>
+          <li>⚡ <strong>Buzzy energy is potential</strong>—exercise is the golden key that turns it into curiosity and superpowers!</li>
           <li>😊 <strong>Happy chemicals</strong> flood your brain when you move: endorphins, dopamine, and serotonin!</li>
           <li>🧘 <strong>Exercise is mindfulness</strong>—you're focusing on your body, breathing, and the present moment!</li>
           <li>🎮 <strong>Any movement counts!</strong> Running, dancing, jumping, swimming—pick what's fun for YOU!</li>
-          <li>⏱️ <strong>Just 30 seconds</strong> of movement can change how you feel!</li>
+          <li>⏱️ <strong>Just 30 seconds</strong> of movement can unlock your curiosity!</li>
         </ul>
         <p class="motivation-quote">
-          "When your brain won't stop spinning, make your body start moving!" 🏃💨
+          "When your thoughts spin in circles, move your body and unlock your curiosity!" 🏃✨
         </p>
         <p style="text-align:center; font-weight:bold; color:#6bcb77; font-size:1.2em;">
-          You're not stuck in your head. You're just full of energy that needs to MOVE! Go have some fun! 🎉✨
+          You're not stuck. You're full of potential waiting to MOVE! Go explore and have fun! 🎉✨
         </p>
       </div>
     </div>
@@ -556,11 +557,11 @@
       </div>
 
       <div class="question" data-correct="c">
-        <h3><span class="q-number">2</span> What happens to built-up stress energy when you exercise?</h3>
+        <h3><span class="q-number">2</span> What happens to your buzzy energy when you exercise?</h3>
         <div class="options">
           <div class="option" data-value="a">🅰️ It gets bigger and bigger</div>
           <div class="option" data-value="b">🅱️ It turns into homework</div>
-          <div class="option" data-value="c">🅲️ It gets released from your body</div>
+          <div class="option" data-value="c">🅲️ It turns into curiosity and potential</div>
           <div class="option" data-value="d">🅳️ It hides in your shoes</div>
         </div>
       </div>
@@ -591,3 +592,14 @@
 
     <div class="btn-group">
       <a href="topic10.html" class="btn btn-primary prev-link">← Previous: Stop Overthinking! 🧠</a>
+      <a href="topic12.html" class="btn btn-success next-link">Next: Stay Curious! 🔍 →</a>
+    </div>
+
+    <footer class="footer">
+      <p>🌟 MindQuest - Topic 11: Exercise - Release Your Potential! 🌟</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
